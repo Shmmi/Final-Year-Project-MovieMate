@@ -1,0 +1,144 @@
+/* Setting the style and appearance of the movies list */
+.movies-list {
+  display: flex;
+  align-items: center;
+}
+/* Setting the style and appearance of the movies grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Setting the style and appearance of each movie grid item */
+.movie-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+/* Setting the style and appearance of the scroll button */
+.scroll-button {
+  border: 3px solid black;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px black;
+  filter: grayscale(50%);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  /* Adding a hover effect to the scroll button */
+  &:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out .3s; 
+  }
+}
+
+/* Setting the style and appearance of the movies container */
+.movies-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.movies-container::-webkit-scrollbar {
+  display: none;
+}
+/* Setting the style and appearance of each movie card */
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: .5rem;
+}
+
+h2{
+  color:rgb(255, 255, 255);
+  font-size:25px; 
+  padding: 10px;
+}
+/* Setting the style and appearance of each movie link */
+.movie-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Setting the style and appearance of each movie image */
+.movie-card img {
+  height: auto;
+  width: auto;
+}
+
+/* Setting the style and appearance of each movie title */
+.movie-card h3 {
+  color: white;
+}
+
+/* Setting the style and appearance of each movie button */
+.movie-card button {
+    padding:.5rem .75rem; 
+    border-radius:.25rem; 
+    border:none; 
+    background-color:#ff6347; /* Tomato color */
+    color:white; 
+    font-size:.75rem; 
+    font-weight:bold; 
+    cursor:pointer;
+
+    /* Adding a hover effect to each movie button */
+    &:hover {
+      transform: scale(1.0);
+      transition: all ease-in-out .3s; 
+    }
+}
+
+
+/* Styles for smaller screens */
+@media only screen and (max-width: $breakpoint-sm) {
+   /* Showing the scroll button on smaller screens */
+   .scroll-button {
+     display:block; 
+   }
+
+   /* Adjusting the width of each movie image on smaller screens */
+   .movie-card img {
+     width:100%; 
+   }
+
+   /* Adjusting the font size of each movie title on smaller screens */
+   .movie-card h3 {
+     font-size:.75rem; 
+   }
+
+   /* Adjusting the font size of each movie button on smaller screens */
+   .movie-card button {
+     font-size:.5rem; 
+   }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width:$breakpoint-lg) {
+    /* Adjusting the width of each movie image on larger screens */
+    .movie-card img {
+      width:auto; 
+    }
+
+    /* Adjusting the font size of each movie title on larger screens */
+    .movie-card h3 {
+      font-size:1rem; 
+    }
+
+    /* Adjusting the font size of each movie button on larger screens */
+    .movie-card button {
+      font-size:.75rem; 
+    }
+}
+

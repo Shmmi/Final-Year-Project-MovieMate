@@ -1,0 +1,243 @@
+/* Setting the style and appearance of the footer */
+/*.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  */
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* Change this to a darker color */
+    color: white;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    position: relative; /* Make the footer position relative */
+    z-index: -1; /* Put the footer behind other elements */
+}
+
+/* Adding a pseudo-element to create a gradient overlay on top of the background image */
+.footer::before {
+    content:''; /* Add an empty content */
+    position:absolute; /* Make the pseudo-element position absolute */
+    top:0; /* Align it to the top of the footer */
+    left:0; /* Align it to the left of the footer */
+    right:0; /* Align it to the right of the footer */
+    bottom:0; /* Align it to the bottom of the footer */
+    z-index:-1; /* Put it behind other elements */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)); /* Add a linear gradient with some transparency */
+}
+  /* Setting the style and appearance of the inside footer */
+  .inside-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  /* Setting the style and appearance of the footer container */
+  .footer-container {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;*/
+    display: grid; /* Change this to grid */
+    grid-template-columns: repeat(2, 1fr); /* Define two columns of equal width */
+    grid-template-rows: auto auto; /* Define two rows of auto height */
+    gap: 1rem; /* Add some gap between the grid items */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Setting the style and appearance of the logo part */
+  .logopart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Setting the style and appearance of the logo image */
+  .logopart img {
+    height: 3rem;
+    width: auto;
+  }
+  
+  /* Setting the style and appearance of the logo text */
+  .logopart h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Setting the style and appearance of the socials */
+  .socials {
+    display: flex;
+    margin-top: .5rem;
+    grid-column-start: 1;
+  }
+  
+  /* Setting the style and appearance of each social link */
+  .socials a {
+    margin-left: .5rem;
+  }
+  
+  /* Setting the style and appearance of each social icon */
+  .socials svg {
+    height: 2rem;
+    width: auto;
+  
+     /* Adding a hover effect to each social icon */
+     &:hover {
+       transform: scale(1.1);
+       transition: all ease-in-out .3s; 
+     }
+  }
+  
+  
+  .subscribe {
+    grid-column: span 2;
+    width: 80%;
+    max-width: 500px;
+    margin : 0 auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+  }
+  .subscribe h1{
+    color: white;
+    font-size: 2rem;
+  }
+  .subscribe p {
+    color: white; /* Using the same color as the footer text */
+    font-size: 1rem;
+  }
+  /* Setting the style and appearance of the input row */
+.inputrow {
+  display: flex;
+}
+
+/* Setting the style and appearance of the email input */
+.inputrow input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+/* Setting the style and appearance of the submit button */
+.inputrow button {
+  padding: .5rem .75rem; /* Using the same padding as the other buttons in the footer */
+  border-radius: .25rem; /* Using the same border radius as the other buttons in the footer */
+  border: none;
+  background-color: #ff6347; /* Using a different background color to make it stand out */
+  color: white;
+}
+
+/* Adding a hover effect to the submit button */
+.inputrow button:hover {
+  opacity: 0.8;
+}
+  /*.subscribe input {
+    color: rgb(71, 71, 71);
+    border-style: solid;
+    padding-bottom: 7px;
+    padding-top: 23px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-bottom: 20px;
+    border-bottom-width: 4px;
+    border-color: rgb(218, 218, 218);
+    background-color: rgb(246, 246, 246);
+    font-family: "Josefin Sans", Arial, sans-serif;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: normal;
+    width: 300px;
+    height: 20px;
+    
+  }*/
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5rem; /* Add some top margin */
+    grid-column-start: 2;
+  }
+  /* Adding some styles for smaller screens */
+
+@media only screen and (max-width:$breakpoint-sm) {
+  /* Changing the grid layout on smaller screens */
+  .footer-container {
+    grid-template-columns: repeat(1, 1fr); /* Define one column of full width */
+    grid-template-rows: auto auto auto auto; /* Define four rows of auto height */ 
+  }
+
+  .subscribe {
+    grid-column-start: 1; /* Align the subscribe form to the first column */ 
+    grid-row-start: 1; /* Align it to the first row */ 
+  }
+
+  .socials {
+    grid-column-start: 1; /* Align the socials to the first column */ 
+    grid-row-start: 2; /* Align it to the second row */ 
+  }
+
+  .copy-right {
+    grid-column-start: 1; /* Align the copy right to the first column */ 
+    grid-row-start: 3; /* Align it to the third row */ 
+  }
+}
+  /*
+  @media only screen and (max-width: $breakpoint-sm) {
+    
+     .footer-container {
+       flex-direction: column;
+     }
+  
+     .logopart {
+       margin-bottom: .5rem;
+     }
+  
+ 
+     .socials a {
+       margin-left:.25rem; 
+       margin-right:.25rem; 
+     }
+  
+    
+     .socials svg {
+       height:1.5rem; 
+       width:auto; 
+     }
+  
+     
+     .btn4 a {
+       margin-top:.5rem; 
+     }
+  }
+  
+  
+  @media only screen and (min-width:$breakpoint-lg) {
+      
+      .socials svg {
+        height:2.5rem; 
+        width:auto; 
+        margin-left:.75rem; 
+      }
+  
+     
+      .btn4 a {
+        font-size:.75rem; 
+        padding:.75rem 1rem; 
+      }
+  }
+  */

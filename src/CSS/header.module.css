@@ -1,0 +1,90 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+  text-transform: capitalize;
+  color: white;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+header .logo img {
+  height: 1rem;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+header .logo h3 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 5px;
+}
+
+header .nav {
+  display: flex;
+  align-items: center;
+}
+
+header .nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header .nav ul li {
+  margin-left: 1rem;
+}
+
+header .nav ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 3px;
+  cursor: pointer;
+}
+
+header .nav ul li a svg {
+  margin-right: 0.25rem;
+}
+
+header .user {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+header .user svg {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+header .user svg:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out .3s; 
+}
+
+header .user div {
+    margin-left:.5rem; 
+    font-size:1rem; 
+    font-weight:bold; 
+}
+
+@media only screen and (max-width: 767px) {
+    header .nav {display:none;}
+    header .user svg {height:1.5rem;width:auto;}
+}
+
+@media only screen and (min-width: 250px) {
+    header .logo img {height:1.5rem;width:auto;margin-right:1rem;}
+    header .logo h3 {font-size:1.5rem;font-weight:bold;}
+    header .nav ul li a {font-size:1.25rem;}
+    header .nav ul li a svg {height:1.25rem;width:auto;margin-right:.5rem;}
+    header .user svg {height:2rem;width:auto;margin-left:2rem;}
+    header .user div {margin-left:1rem;font-size:1.25rem;font-weight:bold;}
+}

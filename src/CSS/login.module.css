@@ -1,0 +1,79 @@
+
+form{
+  display: block;
+ box-sizing: border-box;
+ 
+}
+/* Styling the container for the login page */
+.login-container {
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+    top: 0px;
+    right: 50%;
+    margin-top:50px; 
+    margin-bottom:5px; 
+    margin-left:50px; 
+}
+
+/* Styling the form within the login container */
+.login-form {
+  position: relative;
+  width: 100%;
+  max-width: 488px;
+  padding: 64px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 32px;
+  background-color: white; /* Changed from honeydew to white */
+}
+/* Styling the label element */
+label {
+  display: block; /* Make the label take up the whole line */
+  font-weight: bold; /* Make the label text bold */
+  margin-bottom: 10px; /* Add some space below the label */
+}
+
+/* Styling the input element */
+.form-input {
+  width: 80%; /* Make the input take up 80% of the available width */
+  padding: 15px; /* Add some padding inside the input */
+  border: none; /* Remove the default border */
+  border-radius: 10px; /* Add some rounded corners */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1); /* Add a subtle inner shadow effect */
+}
+
+/* Styling the input element when it gets focus */
+input:focus {
+  outline: none; /* Remove the default outline */
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.2); /* Increase the inner shadow effect */
+}
+
+/* Styling the button element within the form */
+.form-button {
+  margin-top: 20px;
+  width: 80%;
+  padding:.5rem .75rem; 
+  border-radius:.25rem; 
+  border:none; 
+  background-color:#ff6347; /* Tomato color */
+  color:white; 
+  font-size:.75rem; 
+  font-weight:bold; 
+  cursor:pointer;
+
+  /* Adding a hover effect to each login button */
+  &:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out .3s; 
+    box-shadow:
+     inset -3px -3px #f6f7f8,
+     inset -2px -2px #eaebee,
+     inset -3px -3px #f6f7f8,
+     inset -4px -4px #eaebee,
+     -.5px -.5px #f6f7f8,
+     -1px -1px #eaebee,
+     .5px .5px #f6f7f8,
+     -1px -1px #eaebee; 
+  }
+}

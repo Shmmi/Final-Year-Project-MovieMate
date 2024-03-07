@@ -1,0 +1,126 @@
+.MovieContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1cm;
+  overflow: hidden;
+}
+.MovieContainer a {
+  display: block;
+}
+.HeroSection {
+  height: auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-left: 0.5cm;
+  padding-right: 0.5cm;
+}
+
+.HeroSection img{
+  height: 70vh;
+  /*width: 50%;*/
+}
+.HeroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.Heading {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.Subheading {
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.ReleaseDate {
+   color: white;
+   font-size: 1.5rem;
+   margin-bottom: .5rem;
+   text-align: center;
+   text-shadow: 2px 2px black;
+}
+.AddButton {
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    border: none;
+    background-color:#ff6347; /* Tomato color */
+    color:white; 
+    font-size:.75rem; 
+    font-weight:bold; 
+    cursor:pointer;
+
+  
+    &:hover {
+      transform: scale(1.1);
+      transition: all ease-in-out .3s; 
+      box-shadow:
+       inset -3px -3px #f6f7f8,
+       inset -2px -2px #eaebee,
+       inset -3px -3px #f6f7f8,
+       inset -4px -4px #eaebee,
+       -.5px -.5px #f6f7f8,
+       -1px -1px #eaebee,
+       .5px .5px #f6f7f8,
+       -1px -1px #eaebee; 
+    }
+}
+
+.PlayButton {
+  
+  background-color: blue;
+  color: white;
+  padding: .5rem .75rem;
+  border-radius: .25rem;
+  border: none; 
+  font-size:.75rem; 
+  font-weight:bold; 
+  cursor:pointer;
+
+  &:hover {
+
+     transform: scale(1.1);
+     
+     transition: all ease-in-out .3s; 
+    
+     box-shadow:
+      inset -3px -3px #f6f7f8,
+      inset -2px -2px #eaebee,
+      inset -3px -3px #f6f7f8,
+      inset -4px -4px #eaebee,
+      -.5px -.5px #f6f7f8,
+      -1px -1px #eaebee,
+      .5px .5px #f6f7f8,
+      -1px -1px #eaebee; 
+   }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .MovieContainer {
+    flex-direction: column;
+  }
+  .HeroSection img {
+    height: 50vh;
+    width: 100%;
+  }
+  .HeroContent {
+    height: auto;
+    width: 100%;
+  }
+}

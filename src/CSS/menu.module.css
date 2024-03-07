@@ -1,0 +1,89 @@
+/* Importing a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Styling the body element */
+body {
+  font-family: 'Roboto', sans-serif; /* Using the custom font */
+  background-color: #f0f0f0; /* Using a light gray background color */
+}
+
+/* Styling the button element */
+.menubutton {
+  padding: 10px 20px; /* Adding some padding inside the button */
+  border: none; /* Removing the default border */
+  border-radius: 5px; /* Adding some rounded corners */
+  background-color: #ff6347; /* Using a tomato color */
+  color: white; /* Using a white color for the text */
+  font-weight: bold; /* Making the text bold */
+  cursor: pointer; /* Changing the cursor to a pointer when hovering */
+}
+
+/* Styling the button element when hovering */
+.menubutton:hover {
+  background-color: #ff7b5c; /* Using a lighter shade of tomato color */
+}
+
+/* Styling the button element when clicking */
+.menubutton:active {
+  background-color: #e5533d; /* Using a darker shade of tomato color */
+}
+
+/* Styling the modal element */
+.modal {
+  position: fixed; /* Making the modal fixed on the screen */
+  top: 0; /* Aligning the modal to the top of the screen */
+  left: 0; /* Aligning the modal to the left of the screen */
+  right: 0; /* Aligning the modal to the right of the screen */
+  bottom: 0; /* Aligning the modal to the bottom of the screen */
+  display: flex; /* Using flexbox to align the modal content */
+  justify-content: center; /* Centering the modal content horizontally */
+  align-items: center; /* Centering the modal content vertically */
+  background-color: rgba(0,0,0,0.5); /* Using a semi-transparent black background color */
+}
+
+/* Styling the modal content element */
+.modal-main {
+  position: relative; /* Making the modal content relative to its parent */
+  width: 80%; /* Setting a width for the modal content */
+  max-width: 800px; /* Setting a maximum width for responsiveness */
+  height: auto; /* Setting an auto height for flexibility */
+  padding: 20px; /* Adding some padding inside the modal content */
+  border-radius: 10px; /* Adding some rounded corners */
+  background-color: white; /* Using a white background color */
+}
+
+/* Styling the close button element within the modal content element */
+.modal-main > button {
+  position: absolute; /* Making the close button absolute to its parent */
+  top: -10px; /* Moving the close button above its parent */
+  right: -10px; /* Moving the close button to the right of its parent */
+}
+
+/* Styling the container element within the modal content element */
+.container {
+  display: flex; /* Using flexbox to align the container items */
+}
+
+/* Styling each column element within the container element */
+.column {
+  flex-basis: 20%; /* Setting a base width for each column item */
+}
+
+/* Styling each heading element within each column element */
+.column > h2 {
+  margin-top: 0; /* Removing the default top margin of headings */ 
+  color: #353030;
+}
+
+/* Styling each link element within each column element */ 
+.column > a {
+   display:block;
+   margin-bottom :10px;
+   text-decoration :none;
+   color :#353030;
+   font-size :16px;
+   transition :color .3s;
+}
+.column > a:hover{
+color :#ff6347;
+}
